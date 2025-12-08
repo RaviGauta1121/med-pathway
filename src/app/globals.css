@@ -21,11 +21,11 @@
   }
 }
 
-.emergency-pulse {
+/* .emergency-pulse {
   position: relative;
-}
+} */
 
-.emergency-pulse::before {
+/* .emergency-pulse::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -37,7 +37,7 @@
   transform: translate(-50%, -50%);
   animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   z-index: -1;
-}
+} */
 
 /* Loading Spinner */
 @keyframes spin {
