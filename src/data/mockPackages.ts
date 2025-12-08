@@ -1,0 +1,38 @@
+export const mockPackages = [
+  {
+    id: 1,
+    title: "Cardiac Care Package",
+    hospital: "Apollo Hospital, Delhi",
+    city: "Delhi",
+    duration: "7-10 days",
+    price: 250000,
+    includes: [
+      "Pre-operative tests",
+      "Surgery/Procedure",
+      "Hospital stay (7 days)",
+      "Airport pickup & drop",
+      "Accommodation for attendant",
+      "Post-operative care",
+    ],
+    procedures: ["Angioplasty", "Bypass Surgery", "Valve Replacement"],
+    image: "🏥",
+  },
+  {
+    id: 2,
+    title: "Orthopedic Surgery Package",
+    hospital: "Fortis Hospital, Mumbai",
+    city: "Mumbai",
+    duration: "5-7 days",
+    price: 180000,
+    includes: [
+      "Consultation",
+      "Surgery",
+      "Physiotherapy sessions",
+      "Hotel accommodation",
+      "Local transport",
+      "Follow-up consultations",
+    ],
+    procedures: ["Knee Replacement", "Hip Replacement", "Spine Surgery"],
+    image: "🦴",
+  },
+];

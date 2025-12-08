@@ -1,0 +1,26 @@
+export const mockHospitals = [
+  {
+    id: 1,
+    name: "City General Hospital",
+    address: "123 Main Street, Connaught Place, New Delhi - 110001",
+    phone: "+91 98765 43210",
+    emergency: true,
+    rating: 4.8,
+    specialties: ["Emergency Care", "Cardiology", "Orthopedics", "Neurology"],
+    beds: 500,
+    ambulances: 10,
+    facilities: ["ICU", "Emergency", "Operation Theater", "Blood Bank"],
+  },
+  {
+    id: 2,
+    name: "Apollo Hospital",
+    address: "456 Park Road, Andheri, Mumbai - 400053",
+    phone: "+91 98765 43211",
+    emergency: true,
+    rating: 4.9,
+    specialties: ["Cardiology", "Neurology", "Oncology", "Transplant"],
+    beds: 800,
+    ambulances: 15,
+    facilities: ["ICU", "Emergency", "NICU", "Dialysis", "Pharmacy"],
+  },
+];
