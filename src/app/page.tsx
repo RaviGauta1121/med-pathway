@@ -12,14 +12,43 @@ import {
   Heart,
   Sparkles,
   Star,
-  Shield
+  Shield,
+  Syringe,
+  Stethoscope,
+  ClipboardCheck,
+  Globe,
+  HeartPulse
 } from "lucide-react";
 
 export default function HomePage() {
   const mainServices = [
     {
-      title: "Emergency Assistance",
-      description: "24/7 emergency support with ambulance tracking",
+      title: "Travel Consultations",
+      description: "Latest travel health advice and preparation for safe journeys",
+      icon: Plane,
+      href: "/services/travel-consultations",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-600",
+    },
+    {
+      title: "Vaccinations",
+      description: "Wide range of vaccines for travel and disease protection",
+      icon: Syringe,
+      href: "/services/vaccinations",
+      bgColor: "bg-green-50",
+      iconColor: "text-green-600",
+    },
+    {
+      title: "Medical Check-Ups",
+      description: "Comprehensive health assessments before your travels",
+      icon: ClipboardCheck,
+      href: "/services/medical-checkups",
+      bgColor: "bg-purple-50",
+      iconColor: "text-purple-600",
+    },
+    {
+      title: "Emergency Medical Services",
+      description: "24/7 emergency care available whenever you need it",
       icon: Ambulance,
       href: "/emergency",
       bgColor: "bg-red-50",
@@ -27,27 +56,35 @@ export default function HomePage() {
     },
     {
       title: "Medical Tourism",
-      description: "World-class treatment destinations and packages",
-      icon: Plane,
+      description: "World-class medical care at affordable prices",
+      icon: Globe,
       href: "/medical-tourism",
-      bgColor: "bg-blue-50",
-      iconColor: "text-blue-600",
+      bgColor: "bg-cyan-50",
+      iconColor: "text-cyan-600",
+    },
+    {
+      title: "Health Solutions",
+      description: "Personalized health plans for optimal wellness",
+      icon: HeartPulse,
+      href: "/services/health-solutions",
+      bgColor: "bg-pink-50",
+      iconColor: "text-pink-600",
     },
     {
       title: "Online Consultation",
       description: "Connect with expert doctors via video call",
       icon: Video,
       href: "/consultation",
-      bgColor: "bg-green-50",
-      iconColor: "text-green-600",
+      bgColor: "bg-indigo-50",
+      iconColor: "text-indigo-600",
     },
     {
       title: "Health Information",
       description: "Comprehensive health resources and tips",
       icon: BookOpen,
       href: "/health-info",
-      bgColor: "bg-purple-50",
-      iconColor: "text-purple-600",
+      bgColor: "bg-orange-50",
+      iconColor: "text-orange-600",
     },
   ];
 
@@ -151,7 +188,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {mainServices.map((service) => (
               <Link
                 key={service.title}
@@ -164,7 +201,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-600 text-sm">{service.description}</p>
               </Link>
             ))}
           </div>
@@ -271,7 +308,7 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold mb-3 text-gray-900">24/7 Emergency Support</h3>
               <p className="text-gray-600 mb-6">Round-the-clock emergency medical assistance whenever you need it</p>
               <Link href="/emergency" className="inline-flex items-center text-blue-600 font-semibold hover:gap-2 transition-all">
-                Learn More <span className="ml-1">→</span>
+                Get Help <span className="ml-1">→</span>
               </Link>
             </div>
 
@@ -281,22 +318,13 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Family Health Plans</h3>
               <p className="text-gray-600 mb-6">Special comprehensive packages designed for your entire family's health</p>
-              <Link href="/consultation" className="inline-flex items-center text-blue-600 font-semibold hover:gap-2 transition-all">
+              <Link href="/services/health-solutions" className="inline-flex items-center text-blue-600 font-semibold hover:gap-2 transition-all">
                 View Plans <span className="ml-1">→</span>
               </Link>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Emergency Button - Floating */}
-      <Link
-        href="/emergency"
-        className="emergency-pulse fixed bottom-8 right-8 z-50 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-4 rounded-full font-bold hover:from-red-700 hover:to-red-800 transition-all shadow-2xl flex items-center gap-2 group"
-      >
-        <Phone className="h-6 w-6 group-hover:animate-pulse" />
-        <span>Emergency</span>
-      </Link>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import { Heart, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,18 +9,27 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Heart className="h-8 w-8 text-medical-primary" />
-              <span className="text-xl font-bold">Med Pathway</span>
+              <Heart className="h-8 w-8 text-blue-500 fill-blue-500" />
+              <span className="text-xl font-bold">MedPathway</span>
             </div>
-            <p className="text-gray-400">
-              Your trusted healthcare platform for emergency assistance and medical services.
+            <p className="text-gray-400 mb-4">
+              Your trusted travel clinic in Bengaluru, making medical journeys smooth and stress-free.
             </p>
+            <div className="flex items-center gap-2 text-gray-400 text-sm">
+              <Clock className="h-4 w-4" />
+              <span>Open 24/7</span>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
+              <li>
+                <Link href="/" className="text-gray-400 hover:text-white transition">
+                  Home
+                </Link>
+              </li>
               <li>
                 <Link href="/emergency" className="text-gray-400 hover:text-white transition">
                   Emergency
@@ -41,17 +50,24 @@ export default function Footer() {
                   Health Info
                 </Link>
               </li>
+              <li>
+                <Link href="/about" className="text-gray-400 hover:text-white transition">
+                  About Us
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Services</h3>
+            <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400">24/7 Emergency</li>
-              <li className="text-gray-400">Online Consultation</li>
-              <li className="text-gray-400">Ambulance Booking</li>
-              <li className="text-gray-400">Medical Records</li>
+              <li className="text-gray-400">Travel Consultations</li>
+              <li className="text-gray-400">Vaccinations</li>
+              <li className="text-gray-400">Medical Check-Ups</li>
+              <li className="text-gray-400">Emergency Medical Services</li>
+              <li className="text-gray-400">Medical Tourism</li>
+              <li className="text-gray-400">Health Solutions</li>
             </ul>
           </div>
 
@@ -59,24 +75,32 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-gray-400">
-                <Phone className="h-4 w-4" />
-                <span>+91 1800-XXX-XXXX</span>
+              <li className="flex items-start gap-2 text-gray-400">
+                <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                <span>Bengaluru, India</span>
               </li>
-              <li className="flex items-center gap-2 text-gray-400">
-                <Mail className="h-4 w-4" />
-                <span>support@medpathway.com</span>
+              <li className="flex items-start gap-2 text-gray-400">
+                <Phone className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                <a href="tel:+917676833165" className="hover:text-white transition">
+                  +91-767-683-3165
+                </a>
               </li>
-              <li className="flex items-center gap-2 text-gray-400">
-                <MapPin className="h-4 w-4" />
-                <span>India</span>
+              <li className="flex items-start gap-2 text-gray-400">
+                <Mail className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                <a href="mailto:medpathway01@gmail.com" className="hover:text-white transition break-all">
+                  medpathway01@gmail.com
+                </a>
               </li>
             </ul>
+            <div className="mt-4 text-sm text-gray-400">
+              <p className="font-semibold text-white mb-1">Opening Hours</p>
+              <p>24 hours a day, 7 days a week</p>
+            </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Med Pathway. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MedPathway. All rights reserved.</p>
         </div>
       </div>
     </footer>
