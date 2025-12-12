@@ -28,6 +28,7 @@ export default function Navbar() {
     { name: "Health Info", href: "/health-info" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
+    { name: "Emergency", href: "/emergency" },
   ];
 
   const isActive = (href: string) => pathname === href;

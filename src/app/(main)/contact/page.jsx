@@ -33,7 +33,10 @@ export default function ContactForm() {
           if (activeField) {
             setFormData((prev) => ({
               ...prev,
-              [activeField]: prev[activeField] + " " + transcript,
+              // Convert to lowercase and remove spaces for email field only
+              [activeField]: activeField === "email" 
+                ? (prev[activeField] + " " + transcript).toLowerCase().replace(/\s+/g, '')
+                : prev[activeField] + " " + transcript,
             }));
           }
           setIsListening(false);
@@ -230,7 +233,7 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 pr-12 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 pr-12 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition-colors lowercase"
                     placeholder="your@email.com"
                   />
                   {browserSupport && (
@@ -242,7 +245,7 @@ export default function ContactForm() {
                           ? "bg-red-100 text-red-600"
                           : "bg-gray-100 text-gray-600 hover:bg-blue-50 hover:text-blue-600"
                       }`}
-                      title="Voice input"
+                      title="Voice input (converts to lowercase)"
                     >
                       {isListening && activeField === "email" ? (
                         <MicOff className="h-5 w-5 animate-pulse" />
@@ -252,6 +255,11 @@ export default function ContactForm() {
                     </button>
                   )}
                 </div>
+                {isListening && activeField === "email" && (
+                  <p className="text-xs text-blue-600 mt-1">
+                    💡 Tip: Say "at" for @ and "dot" for . (e.g., "john at gmail dot com")
+                  </p>
+                )}
               </div>
 
               {/* Phone Field */}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Heart, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function Footer() {
@@ -9,8 +10,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Heart className="h-8 w-8 text-blue-500 fill-blue-500" />
-              <span className="text-xl font-bold">MedPathway</span>
+              <Image
+                src="/images/logo.png"
+                alt="MedPathway Logo"
+                width={180}
+                height={60}
+                className="object-contain"
+              />
             </div>
             <p className="text-gray-400 mb-4">
               Your trusted travel clinic in Bengaluru, making medical journeys smooth and stress-free.
