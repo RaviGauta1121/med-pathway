@@ -250,29 +250,36 @@ export default function HomePage() {
     }
   ];
 
-  const doctorVideos = [
-    {
-      id: 1,
-      name: "Dr. Rajesh Kumar",
-      specialty: "Cardiologist",
-      videoSrc: "/images/doctor1.mp4",
-      quote: "Committed to providing exceptional cardiac care with cutting-edge treatments"
-    },
-    {
-      id: 2,
-      name: "Dr. Priya Sharma",
-      specialty: "Dermatologist",
-      videoSrc: "/images/doctor2.mp4",
-      quote: "Your skin health is my priority, using the latest dermatological innovations"
-    },
-    {
-      id: 3,
-      name: "Dr. Amit Patel",
-      specialty: "Orthopedic Surgeon",
-      videoSrc: "/images/doctor3.mp4",
-      quote: "Helping patients regain mobility and live pain-free lives"
-    }
-  ];
+ const doctorVideos = [
+  {
+    id: 1,
+    name: "DR. NITI RAIZADA",
+    specialty:
+      "PRINCIPAL DIRECTOR - MEDICAL ONCOLOGY & HEMATO - ONCOLOGY, FORTIS HOSPITAL, BANNERGHATTA ROAD. BENGALURU",
+    videoSrc: "/images/doctor1.mp4",
+    quote:
+      "Dedicated to delivering compassionate and advanced cancer care for every patient."
+  },
+  {
+    id: 2,
+    name: "DR. SUDARSHAN G T",
+    specialty:
+      "ADDITIONAL DIRECTOR - CARDIO THORACIC VASCULAR SURGERY, FORTIS HOSPITAL, BANNERGHATTA ROAD, BENGALURU",
+    videoSrc: "/images/doctor2.mp4",
+    quote:
+      "Committed to providing precision-driven heart and vascular surgery for safer, stronger recoveries."
+  },
+  {
+    id: 3,
+    name: "DR. MOHAN KESHAVAMURTHY",
+    specialty:
+      "PRINCIPAL DIRECTOR - RENAL SCIENCES, FORTIS HOSPITALS, BENGALURU",
+    videoSrc: "/images/doctor3.mp4",
+    quote:
+      "Focused on delivering comprehensive kidney care to restore health and improve quality of life."
+  }
+];
+
 
   const stats = [
     { number: "500+", label: "Expert Doctors" },
