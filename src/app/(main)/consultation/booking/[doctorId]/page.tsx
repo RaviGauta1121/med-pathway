@@ -131,12 +131,12 @@ export default function BookingPage({ params }: { params: { doctorId: string } }
               />
             </div>
 
-            <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+            {/* <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
               <div className="flex justify-between items-center">
                 <span className="text-gray-700 font-medium">Consultation Fee:</span>
                 <span className="text-2xl font-bold text-gray-900">₹500</span>
               </div>
-            </div>
+            </div> */}
 
             <button
               type="submit"

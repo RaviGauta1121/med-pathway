@@ -749,12 +749,12 @@ export default function ConsultationPage() {
                 </button>
 
                 {/* Consultation Fee */}
-                <div className="flex items-center justify-between mb-3 pt-3 border-t-2 border-dashed border-gray-200">
+                {/* <div className="flex items-center justify-between mb-3 pt-3 border-t-2 border-dashed border-gray-200">
                   <span className="text-sm text-gray-600 font-medium">Consultation Fee</span>
                   <span className="text-2xl font-bold text-green-600">
                     {doctor.consultationFee}
                   </span>
-                </div>
+                </div> */}
 
                 {/* Book Button */}
                 {doctor.available ? (
@@ -931,12 +931,12 @@ export default function ConsultationPage() {
             {/* Modal Footer */}
             <div className="border-t border-gray-200 p-6 bg-gray-50">
               <div className="flex items-center justify-between mb-4">
-                <div>
+                {/* <div>
                   <p className="text-sm text-gray-600">Consultation Fee</p>
                   <p className="text-3xl font-bold text-green-600">
                     {selectedDoctor.consultationFee}
                   </p>
-                </div>
+                </div> */}
                 <div className="flex gap-3">
                   <button
                     onClick={() => setSelectedDoctor(null)}
